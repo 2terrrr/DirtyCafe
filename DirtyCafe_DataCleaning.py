@@ -9,3 +9,9 @@ file_path = '/content/drive/MyDrive/Colab Notebooks/Dirty Cafe Data Cleaning/dir
 df = pd.read_csv(file_path)
 #import the dirty cafe csv
 
+from google.colab import data_table
+data_table.enable_dataframe_formatter()
+
+df
+
+#to see the dataset using colabs table feature
