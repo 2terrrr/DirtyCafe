@@ -13,5 +13,4 @@ from google.colab import data_table
 data_table.enable_dataframe_formatter()
 
 df
-
 #to see the dataset using colabs table feature
