@@ -12,5 +12,5 @@ df = pd.read_csv(file_path)
 from google.colab import data_table
 data_table.enable_dataframe_formatter()
 
-df
+df_cleaned
 #to see the dataset using colabs table feature
