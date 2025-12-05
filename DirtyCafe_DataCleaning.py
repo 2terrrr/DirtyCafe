@@ -17,3 +17,8 @@ df_cleaned
 #to see the dataset using colabs table feature
 
 df = df.astype({'Payment Method': str, 'Location': str})
+
+df["Quantity"] = pd.to_numeric(df["Quantity"], errors='coerce')
+df["Price Per Unit"] = pd.to_numeric(df["Price Per Unit"], errors='coerce')
+df["Total Spent"] = pd.to_numeric(df["Total Spent"], errors='coerce')
+df["Transaction Date"] = pd.to_datetime(df['Transaction Date'], errors='coerce')
