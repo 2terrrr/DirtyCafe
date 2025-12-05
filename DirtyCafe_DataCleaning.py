@@ -22,3 +22,6 @@ df["Quantity"] = pd.to_numeric(df["Quantity"], errors='coerce')
 df["Price Per Unit"] = pd.to_numeric(df["Price Per Unit"], errors='coerce')
 df["Total Spent"] = pd.to_numeric(df["Total Spent"], errors='coerce')
 df["Transaction Date"] = pd.to_datetime(df['Transaction Date'], errors='coerce')
+
+dirty_labels = ["ERROR", "UNKNOWN", "Missing value", "missing value", "nan", "", " "]
+df = df.replace(dirty_labels, np.nan)
