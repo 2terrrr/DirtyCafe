@@ -15,3 +15,5 @@ data_table.enable_dataframe_formatter()
 
 df_cleaned
 #to see the dataset using colabs table feature
+
+df = df.astype({'Payment Method': str, 'Location': str})
