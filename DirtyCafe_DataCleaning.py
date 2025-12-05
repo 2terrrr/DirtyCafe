@@ -37,7 +37,6 @@ standard_prices = {
     "Tea": 1.5
 }
 
-# 1. Fill missing 'Price Per Unit' based on the Item name
 for item, price in standard_prices.items():
     # Find rows where Item matches but Price is missing, and fill it
     mask = (df['Item'] == item) & (df['Price Per Unit'].isna())
