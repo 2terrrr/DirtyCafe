@@ -15,3 +15,6 @@ df = pd.read_csv(file_path)
 profile = ProfileReport(df, title="Dirty Cafe Sales Report", explorative=True)
 
 display(profile.to_notebook_iframe())
+
+from google.colab import data_table
+data_table.enable_dataframe_formatter()
