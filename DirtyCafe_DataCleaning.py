@@ -11,3 +11,7 @@ drive.mount('/content/drive')
 
 file_path = '/content/drive/MyDrive/Colab Notebooks/Dirty Cafe Data Cleaning/dirty_cafe_sales.csv'
 df = pd.read_csv(file_path)
+
+profile = ProfileReport(df, title="Dirty Cafe Sales Report", explorative=True)
+
+display(profile.to_notebook_iframe())
