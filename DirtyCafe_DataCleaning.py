@@ -18,3 +18,6 @@ display(profile.to_notebook_iframe())
 
 from google.colab import data_table
 data_table.enable_dataframe_formatter()
+
+cleaning = ["ERROR", "UNKNOWN", "Missing value", "nan", "missing value", "", " "]
+df = df.replace(cleaning, np.nan)
