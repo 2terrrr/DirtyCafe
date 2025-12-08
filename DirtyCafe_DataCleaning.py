@@ -112,3 +112,11 @@ sales_day_descending.plot(
     color='black',
     alpha=0.8,
 )
+
+plt.title('Sales Volume by Day of Week', fontsize=14)
+plt.ylabel('Total Items Sold (Quantity)', fontsize=12)
+plt.xlabel('Day of the Week', fontsize=12)
+plt.xticks(rotation=45, ha='right')
+plt.grid(axis='y', linestyle='--', alpha=0.5)
+plt.tight_layout()
+plt.show()
