@@ -21,3 +21,5 @@ data_table.enable_dataframe_formatter()
 
 cleaning = ["ERROR", "UNKNOWN", "Missing value", "nan", "missing value", "", " "]
 df = df.replace(cleaning, np.nan)
+
+df = df.astype({'Payment Method': str, 'Location': str})
