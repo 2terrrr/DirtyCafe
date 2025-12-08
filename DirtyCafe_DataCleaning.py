@@ -54,3 +54,7 @@ missing(df)
 df["Total Spent"] = df["Quantity"] * df["Price Per Unit"]
 
 df = df.dropna(subset=['Quantity', 'Price Per Unit']).copy()
+
+profile = ProfileReport(df, title="Dirty Cafe Sales Report", explorative=True)
+
+display(profile.to_notebook_iframe())
