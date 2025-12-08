@@ -32,3 +32,19 @@ df["Transaction Date"] = pd.to_datetime(df['Transaction Date'], errors='coerce')
 
 mean_prices = df.dropna(subset=["Price Per Unit"]).groupby("Item")["Price Per Unit"].mean()
 print(mean_prices)
+
+def missing(df):
+  price_change = {'Cake': 3.00, 'Coffee': 2.00, 'Cookie': 1.00, 'Juice': 3.00, 'Pastry': 2.50, 'Salad': 5.00, 'Sandwich': 4.00, 'Smoothie': 4.00, 'Tea': 1.50}
+  def fill(row):
+    item = row['Item']
+    price = row['Price Per Unit']
+
+    if item in price_change:
+      if pd.isna(price):
+        return price_change[item]
+      else:
+        return price
+    return price
+
+  df['Price Per Unit'] = df.apply(fill, axis=1)
+  return df
