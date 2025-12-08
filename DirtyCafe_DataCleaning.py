@@ -48,3 +48,5 @@ def missing(df):
 
   df['Price Per Unit'] = df.apply(fill, axis=1)
   return df
+
+missing(df)
