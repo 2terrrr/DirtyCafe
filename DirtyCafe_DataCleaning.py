@@ -23,3 +23,9 @@ cleaning = ["ERROR", "UNKNOWN", "Missing value", "nan", "missing value", "", " "
 df = df.replace(cleaning, np.nan)
 
 df = df.astype({'Payment Method': str, 'Location': str})
+
+
+df["Quantity"] = pd.to_numeric(df["Quantity"], errors='coerce')
+df["Price Per Unit"] = pd.to_numeric(df["Price Per Unit"], errors='coerce')
+df["Total Spent"] = pd.to_numeric(df["Total Spent"], errors='coerce')
+df["Transaction Date"] = pd.to_datetime(df['Transaction Date'], errors='coerce')
