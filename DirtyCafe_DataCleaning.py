@@ -90,3 +90,12 @@ plt.xlabel('Item')
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
+
+
+
+df['Day'] = df['Transaction Date'].dt.day_name()
+
+sales_day_descending = df.groupby("Day", observed=True)['Quantity'].sum().sort_values(ascending=False)
+
+top_day_name = sales_day_descending.index[0]
+top_day_qty = sales_day_descending.iloc[0]
