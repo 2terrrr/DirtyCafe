@@ -99,3 +99,8 @@ sales_day_descending = df.groupby("Day", observed=True)['Quantity'].sum().sort_v
 
 top_day_name = sales_day_descending.index[0]
 top_day_qty = sales_day_descending.iloc[0]
+
+print("\nOn which day of the week does the cafe see the highest sales volume?")
+print(f"Busiest Day: {top_day_name} with {top_day_qty} units sold")
+print("\nDay-wise Sales (Quantity Sum, Descending Order):")
+print(sales_day_descending)
