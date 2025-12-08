@@ -81,3 +81,12 @@ top_item_name = quantity_by_item.index[0]
 top_item_qty = quantity_by_item.iloc[0]
 print(f"Most Ordered: {top_item_name} with {top_item_qty} units")
 print(quantity_by_item)
+
+plt.figure(figsize=(10, 6))
+quantity_by_item.plot(kind='bar', color='black', alpha=0.8)
+plt.title('Most Ordered Item (By Quantity)')
+plt.ylabel('Quantity Sold')
+plt.xlabel('Item')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
