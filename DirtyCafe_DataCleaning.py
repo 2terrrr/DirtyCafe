@@ -104,3 +104,11 @@ print("\nOn which day of the week does the cafe see the highest sales volume?")
 print(f"Busiest Day: {top_day_name} with {top_day_qty} units sold")
 print("\nDay-wise Sales (Quantity Sum, Descending Order):")
 print(sales_day_descending)
+
+plt.figure(figsize=(10, 6))
+
+sales_day_descending.plot(
+    kind='bar',
+    color='black',
+    alpha=0.8,
+)
