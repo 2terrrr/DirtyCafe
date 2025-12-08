@@ -73,3 +73,11 @@ plt.xlabel('Item')
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
+
+
+print("\nWhat is the most ordered item?")
+quantity_by_item = df.groupby('Item')['Quantity'].sum().sort_values(ascending=False)
+top_item_name = quantity_by_item.index[0]
+top_item_qty = quantity_by_item.iloc[0]
+print(f"Most Ordered: {top_item_name} with {top_item_qty} units")
+print(quantity_by_item)
