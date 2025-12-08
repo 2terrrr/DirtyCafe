@@ -50,3 +50,5 @@ def missing(df):
   return df
 
 missing(df)
+
+df["Total Spent"] = df["Quantity"] * df["Price Per Unit"]
