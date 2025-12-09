@@ -127,3 +127,4 @@ revenue_by_month = df.groupby('Month')['Total Spent'].sum().sort_index()
 print(revenue_by_month)
 
 plt.figure(figsize=(10, 6))
+revenue_by_month.plot(kind='line', marker='o', color='black', linewidth=2)
