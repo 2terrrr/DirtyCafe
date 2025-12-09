@@ -58,6 +58,7 @@ def missing(df):
 # #filling in the values we got from mean_prices
 
 missing(df)
+#calling the def
 
 df["Total Spent"] = df["Quantity"] * df["Price Per Unit"]
 
