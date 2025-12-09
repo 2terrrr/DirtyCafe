@@ -69,6 +69,7 @@ df = df.dropna(subset=['Quantity', 'Price Per Unit']).copy()
 profile = ProfileReport(df, title="Dirty Cafe Sales Report", explorative=True)
 #to check if everything worked or no
 #go to alerts and check 1 by 1
+#make sure that there are no invalid dates
 
 display(profile.to_notebook_iframe())
 
