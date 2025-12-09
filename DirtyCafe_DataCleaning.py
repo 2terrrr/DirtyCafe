@@ -125,3 +125,5 @@ print("\nWhat are the revenue trends across different months?")
 df['Month'] = df['Transaction Date'].dt.to_period('M')
 revenue_by_month = df.groupby('Month')['Total Spent'].sum().sort_index()
 print(revenue_by_month)
+
+plt.figure(figsize=(10, 6))
