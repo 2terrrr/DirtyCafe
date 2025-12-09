@@ -13,6 +13,7 @@ drive.mount('/content/drive')
 
 file_path = '/content/drive/MyDrive/Colab Notebooks/Dirty Cafe Data Cleaning/dirty_cafe_sales.csv'
 df = pd.read_csv(file_path)
+#load the dirty cafe csv dataset from drive
 
 profile = ProfileReport(df, title="Dirty Cafe Sales Report", explorative=True)
 
@@ -134,3 +135,5 @@ plt.title('Revenue Trends Across Months')
 plt.ylabel('Total Revenue ($)')
 plt.grid(True)
 plt.show()
+
+
