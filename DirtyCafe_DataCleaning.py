@@ -64,6 +64,7 @@ df["Total Spent"] = df["Quantity"] * df["Price Per Unit"]
 #impute for quantity and price per unit
 
 df = df.dropna(subset=['Quantity', 'Price Per Unit']).copy()
+# drop rows that still has nan
 
 profile = ProfileReport(df, title="Dirty Cafe Sales Report", explorative=True)
 
