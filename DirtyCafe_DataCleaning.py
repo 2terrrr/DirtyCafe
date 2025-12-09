@@ -61,6 +61,7 @@ missing(df)
 #calling the function
 
 df["Total Spent"] = df["Quantity"] * df["Price Per Unit"]
+#impute for quantity and price per unit
 
 df = df.dropna(subset=['Quantity', 'Price Per Unit']).copy()
 
