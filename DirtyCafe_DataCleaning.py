@@ -16,6 +16,7 @@ df = pd.read_csv(file_path)
 #load the dirty cafe csv dataset from drive
 
 profile = ProfileReport(df, title="Dirty Cafe Sales Report", explorative=True)
+#inspect data so that we know what rows to clean and visualize the missing values
 
 display(profile.to_notebook_iframe())
 
