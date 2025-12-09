@@ -120,3 +120,6 @@ plt.xticks(rotation=45, ha='right')
 plt.grid(axis='y', linestyle='--', alpha=0.5)
 plt.tight_layout()
 plt.show()
+
+print("\nWhat are the revenue trends across different months?")
+df['Month'] = df['Transaction Date'].dt.to_period('M')
