@@ -28,13 +28,13 @@ df = df.replace(cleaning, np.nan)
 #determining and cleaning
 
 df = df.astype({'Payment Method': str, 'Location': str})
-#change to numeric and date time
-#coerce to avoid error
 
 df["Quantity"] = pd.to_numeric(df["Quantity"], errors='coerce')
 df["Price Per Unit"] = pd.to_numeric(df["Price Per Unit"], errors='coerce')
 df["Total Spent"] = pd.to_numeric(df["Total Spent"], errors='coerce')
 df["Transaction Date"] = pd.to_datetime(df['Transaction Date'], errors='coerce')
+#change to numeric and date time
+#coerce to avoid error
 
 mean_prices = df.dropna(subset=["Price Per Unit"]).groupby("Item")["Price Per Unit"].mean()
 print(mean_prices)
