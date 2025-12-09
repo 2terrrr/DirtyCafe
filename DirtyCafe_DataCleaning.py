@@ -55,6 +55,7 @@ def missing(df):
 
   df['Price Per Unit'] = df.apply(fill, axis=1)
   return df
+# #filling in the values we got from mean_prices
 
 missing(df)
 
