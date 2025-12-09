@@ -67,6 +67,7 @@ df = df.dropna(subset=['Quantity', 'Price Per Unit']).copy()
 # drop rows that still has nan
 
 profile = ProfileReport(df, title="Dirty Cafe Sales Report", explorative=True)
+#to check if everything worked or no
 
 display(profile.to_notebook_iframe())
 
