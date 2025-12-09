@@ -29,6 +29,7 @@ df = df.replace(cleaning, np.nan)
 
 df = df.astype({'Payment Method': str, 'Location': str})
 #change to numeric and date time
+#coerce to avoid error
 
 df["Quantity"] = pd.to_numeric(df["Quantity"], errors='coerce')
 df["Price Per Unit"] = pd.to_numeric(df["Price Per Unit"], errors='coerce')
